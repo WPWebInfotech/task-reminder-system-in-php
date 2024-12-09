@@ -1,0 +1,339 @@
+/* General Reset and Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styles (Middle section) */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="datetime-local"],
+button {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="datetime-local"]:focus,
+button:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    font-size: 1em;
+}
+
+/* Dashboard Layout: Left and Right sections */
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    width: 90%;
+}
+
+.dashboard-left, .dashboard-right {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0 10px;
+}
+
+.dashboard-left {
+    max-width: 48%;
+}
+
+.dashboard-right {
+    max-width: 48%;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    button {
+        font-size: 1.1em;
+    }
+
+    /* Dashboard Layout */
+    .dashboard-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dashboard-left, .dashboard-right {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Pending and Completed Task Styling */
+.pending {
+    background-color: #ffcccc; /* Light red for pending tasks */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.completed {
+    background-color: #d4edda; /* Light green for completed tasks */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.dashboard-left, .dashboard-right {
+    flex: 1;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-left h3, .dashboard-right h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.dashboard-left ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dashboard-left li {
+    margin-bottom: 10px;
+}
+
+.dashboard-left a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.dashboard-left a:hover {
+    text-decoration: underline;
+}
+
+
+/* General Layout and Flexbox */
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.dashboard-left, .dashboard-right {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-left h3, .dashboard-right h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+/* Task List Styling */
+.task-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    list-style: none;
+}
+
+.completed {
+    background-color: #d4edda; /* Light green for completed tasks */
+}
+
+.pending {
+    background-color: #ffcccc; /* Light red for pending tasks */
+}
+
+.task-item a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* CRUD Actions - Button Styling */
+.btn-action {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-action:hover {
+    background-color: #0056b3;
+}
+
+/* Task Table Styling */
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.task-table th, .task-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.task-table th {
+    background-color: #f4f4f4;
+}
+
+.task-table td {
+    background-color: #fff;
+}
+
+.task-table .btn-edit, .task-table .btn-delete {
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.task-table .btn-edit {
+    background-color: #ffc107;
+    color: white;
+}
+
+.task-table .btn-edit:hover {
+    background-color: #e0a800;
+}
+
+.task-table .btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.task-table .btn-delete:hover {
+    background-color: #c82333;
+}
